@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+    </head>
+    <body>
+        <button id="btn"></button>
+        <div id="app"></div>
+        <script type="text/javascript">
+            document.getElementById("btn").addEventListener('click', function(){
+                                                            var el = document.getElementById('app');
+                                                            el.innerHTML = "2131231";
+                                                            }, false);
+                                                            
+                                                            var sendMessageByIOS =  function(msg) {
+                                                                var el = document.getElementById('app');
+                                                                el.innerText = JSON.stringify(msg);
+                                                                alert(JSON.stringify(msg));
+                                                            }
+        </script>
+    </body>
+</html>
