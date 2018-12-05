@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn"></button>
+<script type="text/javascript" src="axios.min.js"></script>
+<div id="app"></div>
+<script type="text/javascript">
+    document.getElementById("btn").addEventListener('click', function(){
+        var el = document.getElementById('app');
+        el.innerHTML = "2131231";
+    }, false);
+
+    var sendMessageForIOS =  function() {
+        var el = document.getElementById('app');
+        el.innerText = '123';
+        alert("123");
+    }
+    console.log(axios.get("http://127.0.0.1:5000/poiData").then(function (value) {
+        console.log(value);
+    }))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="echarts.min.js"></script>
+    <script src="vue.js"></script>
+    <title>Title</title>
+    <style type="text/css">
+        html,body{
+            height: 100%;
+            width: 100%;
+            /*opacity: 0.1;*/
+        }
+        #main{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="app">
+    <button v-on:click="valueChange">点我</button>
+</div>
+<div id="main">
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:'#app',
+        methods:{
+            valueChange:function (event) {
+                for(var i=0; i<setModel.data.length; i++){
+                    var item = setModel.data[i];
+                    item.value = 200;
+                    console.log(item);
+                };
+                myChart.setOption({
+                    series : [setModel]
+                })
+            }
+        }
+    });
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    function sendMessageByIOS(message) {
+
+    }
+
+    var setModel = {
+        name: '访问来源',
+        type: 'pie',
+        roseType:'angle',
+        radius: '100%',
+        data:[
+            {value:100, name:'视频广告'},
+            {value:200, name:'联盟广告'},
+            {value:300, name:'邮件营销'},
+            {value:400, name:'直接访问'},
+            {value:500, name:'搜索引擎'}
+        ],
+        itemStyle:{
+            shadowBlur:200,
+            shadowOffsetX:0,
+            shadowOffsetY:0,
+            shadowColor:'rgba(0,0,0,0.5)'
+        },
+        label:{
+            normal:{
+                show:true,
+                textStyle:{
+                    fontSize:30
+                }
+            }
+        }
+    };
+
+    // 指定图表的配置项和数据
+    myChart.setOption({
+        series : [setModel]
+    })
+</script>
+</body>
+</html>
