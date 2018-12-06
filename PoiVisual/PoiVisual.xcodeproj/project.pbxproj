@@ -54,6 +54,7 @@
 		AF8A627221A1C6BE006872DE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AF8A627021A1C6BE006872DE /* index.html */; };
 		AF8A627621A27F49006872DE /* SetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A627521A27F49006872DE /* SetModel.m */; };
 		AF8A627821A28268006872DE /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = AF8A627721A28268006872DE /* map.html */; };
+		AF9D4ACD21B76BCA00798CF6 /* PoiInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9D4ACC21B76BCA00798CF6 /* PoiInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		AF8A627421A27F49006872DE /* SetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetModel.h; sourceTree = "<group>"; };
 		AF8A627521A27F49006872DE /* SetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetModel.m; sourceTree = "<group>"; };
 		AF8A627721A28268006872DE /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
+		AF9D4ACB21B76BCA00798CF6 /* PoiInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoiInfoView.h; sourceTree = "<group>"; };
+		AF9D4ACC21B76BCA00798CF6 /* PoiInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoiInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +314,7 @@
 		AF8A620D219DA499006872DE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				AF9D4ACA21B76B9F00798CF6 /* PoiInfoView */,
 				AF8A6268219F1A7F006872DE /* components */,
 				AF8A6216219DA501006872DE /* ExplainView */,
 				AF8A6212219DA4CA006872DE /* ControlView */,
@@ -421,6 +425,15 @@
 				AF8A627521A27F49006872DE /* SetModel.m */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		AF9D4ACA21B76B9F00798CF6 /* PoiInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				AF9D4ACB21B76BCA00798CF6 /* PoiInfoView.h */,
+				AF9D4ACC21B76BCA00798CF6 /* PoiInfoView.m */,
+			);
+			path = PoiInfoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +603,7 @@
 				AF8A625C219DAE36006872DE /* UICountingLabel.m in Sources */,
 				AF8A6263219E8720006872DE /* ControlViewController.m in Sources */,
 				AF8A624C219DACAC006872DE /* PNChartLabel.m in Sources */,
+				AF9D4ACD21B76BCA00798CF6 /* PoiInfoView.m in Sources */,
 				AF8A624A219DACAC006872DE /* PNBar.m in Sources */,
 				AF8A6253219DACAC006872DE /* PNPieChart.m in Sources */,
 				AF8A624B219DACAC006872DE /* PNBarChart.m in Sources */,

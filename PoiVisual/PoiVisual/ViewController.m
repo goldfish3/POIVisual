@@ -12,6 +12,7 @@
 #import "ExplainView.h"
 #import "ControlViewController.h"
 #import "PNRadarChart.h"
+#import "PoiInfoView.h"
 
 @interface ViewController ()
 @property(strong,nonatomic) DeviceSingle *device;
@@ -20,6 +21,7 @@
 @property(strong,nonatomic) ControlViewController *controlVC;
 @property(strong,nonatomic) MapView *mapView;
 @property(strong,nonatomic) UIButton *setBtn;
+@property(strong,nonatomic) PoiInfoView *infoView;
 @end
 
 @implementation ViewController
@@ -31,8 +33,6 @@
     self.device.height = [UIScreen mainScreen].bounds.size.height;
     
     NSLog(@"%d,%d",self.device.width,self.device.height);
-    
-    
     
     //定义滚动背景
     self.bgScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.device.width, self.device.height)];
@@ -65,6 +65,15 @@
     self.setBtn.layer.cornerRadius = 5;
     [self.setBtn addTarget:self action:@selector(hideAndShow:) forControlEvents:UIControlEventTouchUpInside];
     [self.bgScroll addSubview:self.setBtn];
+    
+    //添加POI信息面板
+    float infoM = 10;
+    float infoWidth = self.device.width / 4;
+    float infoHeight = self.device.height / 3 ;
+    float infoX = self.device.width - (infoWidth+infoM);
+    float infoY = infoM;
+    self.infoView = [[PoiInfoView alloc] initWithFrame:CGRectMake(infoX, infoY, infoWidth, infoHeight)];
+    [self.view addSubview:self.infoView];
     
     //向右滑
     UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(setShow)];
